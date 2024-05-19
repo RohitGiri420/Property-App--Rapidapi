@@ -119,12 +119,12 @@ class Results {
         this.openHouseInfo});
 
   Results.fromJson(Map<String, dynamic> json) {
-    bathrooms = json['bathrooms'];
-    bedrooms = json['bedrooms'];
+    bathrooms = (json['bathrooms'] as num?)?.toInt();
+    bedrooms = (json['bedrooms'] as num?)?.toInt();
     city = json['city'];
     country = json['country'];
     currency = json['currency'];
-    daysOnZillow = json['daysOnZillow'];
+    daysOnZillow = (json['daysOnZillow'] as num?)?.toInt();
     homeStatus = json['homeStatus'];
     homeStatusForHDP = json['homeStatusForHDP'];
     homeType = json['homeType'];
@@ -136,28 +136,28 @@ class Results {
     isShowcaseListing = json['isShowcaseListing'];
     isUnmappable = json['isUnmappable'];
     isZillowOwned = json['isZillowOwned'];
-    latitude = json['latitude'];
+    latitude = (json['latitude'] as num?)?.toDouble();
     listingSubType = json['listing_sub_type'] != null
         ? new ListingSubType.fromJson(json['listing_sub_type'])
         : null;
-    livingArea = json['livingArea'];
-    longitude = json['longitude'];
+    livingArea = (json['livingArea'] as num?)?.toInt();
+    longitude = (json['longitude'] as num?)?.toDouble();
     lotAreaUnit = json['lotAreaUnit'];
-    lotAreaValue = json['lotAreaValue'];
-    price = json['price'];
-    priceForHDP = json['priceForHDP'];
-    rentZestimate = json['rentZestimate'];
+    lotAreaValue = (json['lotAreaValue'] as num?)?.toDouble();
+    price = (json['price'] as num?)?.toInt();
+    priceForHDP = (json['priceForHDP'] as num?)?.toInt();
+    rentZestimate = (json['rentZestimate'] as num?)?.toInt();
     shouldHighlight = json['shouldHighlight'];
     state = json['state'];
     streetAddress = json['streetAddress'];
-    taxAssessedValue = json['taxAssessedValue'];
-    timeOnZillow = json['timeOnZillow'];
-    zestimate = json['zestimate'];
+    taxAssessedValue = (json['taxAssessedValue'] as num?)?.toInt();
+    timeOnZillow = (json['timeOnZillow'] as num?)?.toInt();
+    zestimate = (json['zestimate'] as num?)?.toInt();
     zipcode = json['zipcode'];
-    zpid = json['zpid'];
+    zpid = (json['zpid'] as num?)?.toInt();
     unit = json['unit'];
-    datePriceChanged = json['datePriceChanged'];
-    priceChange = json['priceChange'];
+    datePriceChanged = (json['datePriceChanged'] as num?)?.toInt();
+    priceChange = (json['priceChange'] as num?)?.toInt();
     priceReduction = json['priceReduction'];
     openHouse = json['openHouse'];
     openHouseInfo = json['open_house_info'] != null
@@ -214,6 +214,7 @@ class Results {
     return data;
   }
 }
+
 
 class ListingSubType {
   bool? isFSBA;
