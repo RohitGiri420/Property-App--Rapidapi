@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:giri_estate/Screens/HomeScreen.dart';
 
 void main(){
   runApp(MyApp());
@@ -10,7 +11,8 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      home: Homescreen(),
     );
   }
 
